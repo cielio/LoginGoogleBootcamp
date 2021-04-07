@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "292424807466",
+    "project_id": "logincom-2ebe7",
+    "storage_bucket": "logincom-2ebe7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292424807466:android:4270794894b23e42aeff53",
+        "android_client_info": {
+          "package_name": "com.cielio.logingoolebootcamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292424807466-kadpu8rieohjm7hib46oasgv9tbidbtt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cielio.logingoolebootcamp",
+            "certificate_hash": "bcd4e37782b215fe7c3820a1d29ca6cc18be37aa"
+          }
+        },
+        {
+          "client_id": "292424807466-th8fifeq13jnp0gpm7kb60qmuqhi98lf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7TUUuzWhdIZ-CS0RzrDh12KPnIOgRqSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292424807466-th8fifeq13jnp0gpm7kb60qmuqhi98lf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
