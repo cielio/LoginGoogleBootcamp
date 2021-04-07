@@ -50,11 +50,8 @@ class MainActivity : AppCompatActivity() {
             signOut()
         }
     }
-    private fun signIn() {
-        val signInIntent = googleSignInClient.signInIntent
-
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
+    
+    private fun signIn() = startActivityForResult(googleSignInClient.signInIntent, RC_SIGN_IN)
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -78,10 +75,10 @@ class MainActivity : AppCompatActivity() {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) {task ->
-                if (task.isSuccessful){
+                if (task.isSuccessful) {
                     Log.d(TAG,"firebaseAuthWithGoogle: success")
                     setUpUI()
-                }else{
+                } else {
                     Log.d(TAG,"firebaseAuthWithGoogle: failure", task.exception)
                 }
             }
@@ -89,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpUI() {
         val acct = GoogleSignIn.getLastSignedInAccount(this)
-        if (acct != null){
+        if (acct != null) {
             binding.singInButton.visibility = View.GONE
             binding.singOutButton.visibility = View.VISIBLE
             binding.googleUserCredential.visibility = View.VISIBLE
@@ -112,7 +109,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun signOut() {
         auth.signOut()
         googleSignInClient.signOut().addOnCompleteListener(this, OnCompleteListener {
@@ -121,5 +117,4 @@ class MainActivity : AppCompatActivity() {
            binding.googleUserCredential.visibility = View.GONE
         })
     }
-
 }
